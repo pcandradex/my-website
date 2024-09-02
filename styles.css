@@ -1,0 +1,168 @@
+/* Estilo geral em diferentes navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #20103a;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do header e do menu */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que o menu se quebre em várias linhas em telas menores */
+}
+
+nav ul li {
+    margin: 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+/* Estilo hover e ativo */
+nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Estilo para o link ativo (página atual) */
+nav ul li a.active {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#mode-toggle:hover {
+    background-color: #555;
+}
+
+/* Responsividade para o layout */
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background: #291547;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white
+}
+
+/* Flexbox para alinhamento da imagem e texto */
+.sobre-mim {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.sobre-mim img {
+    max-width: 100%;
+    height: 500px;
+    flex-shrink: 0;
+}
+
+.texto-sobre-mim {
+    flex: 1;
+    color: white
+}
+
+/* Estilos do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Estilo específico para o link do projeto Figma */
+.figma-link {
+    color: #35e7ca; /* Cor específica para este link */
+    font-weight: bold; /* Torna o texto do link em negrito */
+    text-decoration: none; /*Remove a decoração de link */
+}
+.figma-link:hover {
+    color: #80cc28; /* Cor alterada ao passar o mouse */
+}
+/* Estilos gerais do contêiner da imagem */
+.figma-image {
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* Estilos da imagem com efeito de zoom */
+.figma-image img {
+    transition: transform 0.3s ease; /* Define a transição suave para o zoom */
+    display: block;
+    width: 100%; /* Faz com que a imagem ocupe todo o espaço do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.figma-image:hover img {
+    transform: scale(1.1); /* Ajuste o valor conforme necessário */
+}
+
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre-mim {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-mim img {
+        margin-bottom: 20px;
+    }
+}
